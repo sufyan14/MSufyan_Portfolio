@@ -1,0 +1,75 @@
+/* Global smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0D1317;
+}
+
+/* Nav Section */
+.underline-animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  left: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-out;
+}
+
+.underline-animation:hover::after {
+  transform: scaleX(1);
+}
+
+/* Profile Section*/
+
+/* Basic styles */
+.multi-text {
+  min-width: 250px; /* Adjust based on your longest text */
+  white-space: nowrap; /* Ensure the text stays on one line */
+}
+
+.blinking-cursor {
+  font-weight: 100;
+  font-size: 1.5em;
+  color: white;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+  position: relative;
+  left: -5px; /* Adjust position if needed */
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Optional styling */
+.section__text__p1,
+.section__text__p2,
+.title {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Blinking animation */
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
