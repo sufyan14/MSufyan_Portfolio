@@ -45,19 +45,20 @@ const projects = [
   },
   {
     id: 5,
+    image: project6,
+    title: "Youtube Video Pauser",
+    description:
+      "Chrome extension which automatically play/pause videos on switching tabs",
+    techStack: "React Js, Webpack",
+    link: "https://chromewebstore.google.com/detail/youtube-video-pauser/fjififngdlpcdfdnjngajkokjkonjamg",
+  },
+  {
+    id: 6,
     image: project5,
     title: "KSK Coffee",
     description: "Coffee Ordering Website with functionalities and elegant UI",
     techStack: "HTML, CSS, Javascript",
     link: "https://ksk-coffee.netlify.app",
-  },
-  {
-    id: 6,
-    image: project6,
-    title: "Pokemon Generator",
-    description: "Generates random Pokemon cards using poki api",
-    techStack: "HTML, CSS, Javascript",
-    link: "https://poki-card-generator.netlify.app",
   },
 ];
 
