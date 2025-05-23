@@ -4,8 +4,8 @@ import pfp from "../assets/coding.png";
 
 const ProfileSection = () => {
   const words = [
-    "Junior Front-End Developer.",
-    "UX UI Designer.",
+    "Junior Data Analyst.",
+    "Developer.",
     "Software Engineer.",
   ];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -67,8 +67,8 @@ const ProfileSection = () => {
             className="btn btn-color-2 border-2 p-4 px-8 rounded-full bg-white text-black font-semibold border-black transition duration-300 ease-in-out hover:bg-transparent hover:text-white hover:border-white"
             onClick={() => {
               const link = document.createElement("a");
-              link.href = "/assets/Muhammad_Sufyan_Developer_Resume.pdf";
-              link.download = "Muhammad_Sufyan_Developer_Resume.pdf";
+              link.href = "/assets/Muhammad_Sufyan_Data_Analyst_Resume.pdf";
+              link.download = "Muhammad_Sufyan_Data_Analyst_Resume.pdf";
               link.click();
             }}
           >

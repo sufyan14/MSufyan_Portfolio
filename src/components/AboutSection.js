@@ -50,13 +50,13 @@ const AboutSection = () => {
               className="w-full rounded-l-lg"
               alt="Muhammad Sufyan - a passionate developer"
             />
-            <p className="absolute bottom-0 left-0 text-white bg-slate-900 bg-opacity-70 p-2 md:rounded-md rounded-none text-lg">
+            {/* <p className="absolute bottom-0 left-0 text-white bg-slate-900 bg-opacity-70 p-2 md:rounded-md rounded-none text-lg">
               <span className="font-bold md:text-2xl">1.5</span>
               <br />
               <span className="md:text-xl text-sm">Years of</span>
               <br />
               <span className="md:text-xl text-sm">Experience</span>
-            </p>
+            </p> */}
           </div>
 
           {/* About Content */}
@@ -78,13 +78,15 @@ const AboutSection = () => {
               }`}
             >
               <p className="text-white md:text-md text-sm md:text-left text-center leading-8">
-                I’m <span className="font-bold">Muhammad Sufyan,</span> a
-                passionate developer with expertise in UI/UX and Web development
-                specifically in Front-End frameworks. <br />I focus on crafting
-                seamless, user-centered interfaces with a blend of creativity
-                and functionality. <br />
-                My approach combines design and coding expertise to deliver
-                polished, impactful digital experiences.
+                I’m <span className="font-bold">Muhammad Sufyan,</span> a tech
+                enthusiast transitioning into the field of Data Analytics. With
+                a background in UI/UX and Front-End development, I bring a
+                strong foundation in problem-solving, attention to detail, and
+                analytical thinking. 
+                I'm currently focused on building my skills
+                in data analysis. <br/>My goal is to combine my technical background
+                with data-driven insights to deliver solutions that are both
+                impactful and user-friendly.
               </p>
             </div>
           </div>
