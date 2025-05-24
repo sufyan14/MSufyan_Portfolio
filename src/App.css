@@ -4,7 +4,8 @@ html {
 }
 
 body {
-  background: #0D1317;
+  /* background: #0D1317; */
+  background: #0a0a23
 }
 
 /* Nav Section */
@@ -73,3 +74,17 @@ body {
     opacity: 0;
   }
 }
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee linear infinite;
+}
+

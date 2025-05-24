@@ -1,175 +1,105 @@
-import React from "react";
-import { useInView } from "react-intersection-observer";
-import divider from "../assets/divider-bg.jpg";
+import Marquee from "react-fast-marquee";
+import { motion } from "framer-motion";
 import {
-  FaReact,
-  FaWordpress,
-  FaHtml5,
-  FaPython,
-  FaNodeJs,
-} from "react-icons/fa";
-import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
-import { IoLogoCss3 } from "react-icons/io";
-import { IoLogoJavascript, IoLogoFirebase } from "react-icons/io5";
-import {
-  SiDjango,
-  SiMongodb,
-  SiPostman,
-  SiExpress,
-  SiElementor,
+  SiPython,
+  SiNumpy,
+  SiPandas,
+  SiScikitlearn,
+  SiTensorflow,
+  SiKeras,
+  SiTableau,
+  SiMicrosoftsqlserver,
+  SiMysql,
+  SiPowerbi,
 } from "react-icons/si";
-import { GrMysql } from "react-icons/gr";
+import { FaDatabase } from "react-icons/fa";
+import { PiMicrosoftExcelLogoFill } from "react-icons/pi";
+import { SiJupyter } from "react-icons/si";
 
-const Skill = () => {
-  const frontendSkills = [
+const skills = {
+  programming: [
+    { name: "Python", icon: <SiPython className="text-yellow-300" /> },
+    { name: "NumPy", icon: <SiNumpy className="text-blue-500" /> },
+    { name: "Pandas", icon: <SiPandas className="text-indigo-300" /> },
+    { name: "Jupyter", icon: <SiJupyter className="text-orange-300" /> },
+  ],
+  ml_vis: [
     {
-      name: "HTML",
-      icon: <FaHtml5 className="text-orange-500 text-2xl md:text-3xl" />,
+      name: "scikit-learn",
+      icon: <SiScikitlearn className="text-yellow-400" />,
     },
+    { name: "TensorFlow", icon: <SiTensorflow className="text-orange-500" /> },
+    { name: "Keras", icon: <SiKeras className="text-red-400" /> },
+    { name: "Tableau", icon: <SiTableau className="text-orange-300" /> },
+    { name: "Power Bi", icon: <SiPowerbi className="text-yellow-300" /> },
+  ],
+  tools: [
+    { name: "SQL", icon: <FaDatabase className="text-blue-200" /> },
+    { name: "MySQL", icon: <SiMysql className="text-blue-400" /> },
     {
-      name: "CSS",
-      icon: <IoLogoCss3 className="text-blue-700 text-2xl md:text-3xl" />,
+      name: "Excel",
+      icon: <PiMicrosoftExcelLogoFill className="text-green-400" />,
     },
-    {
-      name: "JavaScript",
-      icon: (
-        <IoLogoJavascript className="text-yellow-500 text-2xl md:text-3xl" />
-      ),
-    },
-    {
-      name: "React Js",
-      icon: <FaReact className="text-blue-500 text-2xl md:text-3xl" />,
-    },
-    {
-      name: "Next Js",
-      icon: <RiNextjsFill className="text-white text-2xl md:text-3xl" />,
-    },
-    {
-      name: "Tailwind",
-      icon: (
-        <RiTailwindCssFill className="text-cyan-400 text-2xl md:text-3xl" />
-      ),
-    },
-    {
-      name: "WordPress",
-      icon: <FaWordpress className="text-white text-2xl md:text-3xl" />,
-    },
-    {
-      name: "Elementor",
-      icon: <SiElementor className="text-pink-500 text-2xl md:text-3xl" />,
-    },
-  ];
+  ],
+};
 
-  const backendSkills = [
-    {
-      name: "Node Js",
-      icon: <FaNodeJs className="text-green-500 text-2xl md:text-3xl" />,
-    },
-    {
-      name: "MongoDB",
-      icon: <SiMongodb className="text-green-600 text-2xl md:text-3xl" />,
-    },
-    {
-      name: "Express",
-      icon: <SiExpress className="text-white text-2xl md:text-3xl" />,
-    },
-    {
-      name: "Python",
-      icon: <FaPython className="text-yellow-200 text-2xl md:text-3xl" />,
-    },
-    {
-      name: "Django",
-      icon: <SiDjango className="text-green-600 text-2xl md:text-3xl" />,
-    },
-    {
-      name: "Firebase",
-      icon: <IoLogoFirebase className="text-yellow-700 text-2xl md:text-3xl" />,
-    },
-    {
-      name: "MySQL",
-      icon: <GrMysql className="text-blue-700 text-2xl md:text-3xl" />,
-    },
-    {
-      name: "Postman",
-      icon: <SiPostman className="text-orange-700 text-2xl md:text-3xl" />,
-    },
-  ];
-
-  const { ref: skillsRef, inView: isSkillsInView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
+const DataSkills = () => {
   return (
     <section
       id="skills"
-      ref={skillsRef}
-      className={`main bg-slate-950 font-poppins mt-24 md:mt-96 text-white transition-all duration-700 ${
-        isSkillsInView
-          ? "opacity-100 translate-y-0"
-          : "opacity-0 translate-y-10"
-      }`}
-      aria-label="Skills Section"
+      className="bg-[#111827] py-20 px-4 lg:px-20 min-h-screen"
     >
-      <div
-        className="h-12 w-full bg-repeat bg-center opacity-85"
-        style={{
-          backgroundImage: `url(${divider})`,
-          backgroundSize: "contain",
-        }}
-      />
-      <div className="md:mt-16 mt-10">
-        <h1 className="text-white text-3xl md:text-4xl font-semibold text-center">
-          Skills
-        </h1>
-      </div>
-      <div className="flex flex-col md:flex-row justify-around mt-4 md:mt-12 p-10 space-y-8 md:space-y-0">
-        {/* Front-End Development */}
-        <div className="flex flex-col items-center">
-          <h2 className="text-lg md:text-2xl mb-4">Front-End Development</h2>
-          <div className="grid grid-cols-3 gap-4">
-            {frontendSkills.map((skill, index) => (
-              <div
-                key={index}
-                className={`flex flex-col items-center p-4 bg-blue-950 rounded-lg shadow-md transition-all duration-700 ${
-                  isSkillsInView
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-10"
-                }`}
-              >
-                <div className="mb-2">{skill.icon}</div>
-                <span className="text-xs md:text-lg font-semibold">
-                  {skill.name}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="text-center mb-12"
+      >
+        <h2 className="md:text-4xl text-3xl font-bold bg-gradient-to-r from-yellow-400 to-pink-500 bg-clip-text text-transparent">
+          Data & Analytical Skills
+        </h2>
+        <p className="text-gray-400 mt-3 md:text-lg text-md max-w-xl mx-auto">
+          Technologies and tools I use in data science, machine learning, and
+          data analysis.
+        </p>
+      </motion.div>
 
-        {/* Back-End Development */}
-        <div className="flex flex-col items-center">
-          <h2 className="text-lg md:text-2xl mb-4">Back-End Development</h2>
-          <div className="grid grid-cols-3 gap-4">
-            {backendSkills.map((skill, index) => (
-              <div
-                key={index}
-                className={`flex flex-col items-center p-4 bg-blue-950 rounded-lg shadow-md transition-all duration-700 ${
-                  isSkillsInView
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-10"
-                }`}
-              >
-                <div className="mb-2">{skill.icon}</div>
-                <span className="text-xs md:text-lg font-semibold">
-                  {skill.name}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+      {Object.entries(skills).map(([section, skillsList], idx) => {
+        const titles = {
+          programming: "Programming & Libraries",
+          ml_vis: "Machine Learning & Visualization",
+          tools: "Data Tools & Databases",
+        };
+
+        return (
+          <motion.div
+            key={section}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: idx * 0.2 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <h3 className="md:text-2xl text-xl font-semibold text-white text-center mb-6">
+              {titles[section]}
+            </h3>
+            <Marquee pauseOnHover gradient={false} speed={60}>
+              {skillsList.map((skill, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col items-center justify-center mx-6 bg-white/10 backdrop-blur-md rounded-xl p-4 text-white shadow-md hover:bg-white/20 transition-all duration-300 min-w-[120px]"
+                >
+                  <div className="text-3xl mb-2">{skill.icon}</div>
+                  <p className="text-sm">{skill.name}</p>
+                </div>
+              ))}
+            </Marquee>
+          </motion.div>
+        );
+      })}
     </section>
   );
 };
 
-export default Skill;
+export default DataSkills;

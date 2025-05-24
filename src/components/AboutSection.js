@@ -1,20 +1,19 @@
 import React, { useEffect, useRef, useState } from "react";
 import about_pic from "../assets/about-pic.jpg";
-import divider from "../assets/divider-bg.jpg";
 
 const AboutSection = () => {
-  const [isTextVisible, setIsTextVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const contentRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsTextVisible(true);
+          setIsVisible(true);
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.2 }
     );
 
     if (contentRef.current) {
@@ -27,68 +26,52 @@ const AboutSection = () => {
   return (
     <section
       id="about"
-      className="w-full mx-auto font-poppins md:mt-96 mt-24"
-      ref={contentRef} // Attach the ref here for observation
+      ref={contentRef}
+      className="bg-[#0c0c2b] py-16 px-4 md:px-20 min-h-screen"
     >
-      {/* Divider */}
-      <div
-        className="h-12 w-full bg-repeat bg-center opacity-85"
-        style={{
-          backgroundImage: `url(${divider})`,
-          backgroundSize: "contain",
-        }}
-      />
-
-      {/* Background Container */}
-      <div className="bg-slate-950 bg-opacity-70 p-10">
-        {/* Inner Centered Container */}
-        <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center bg-zinc-900 md:rounded-lg rounded-none md:shadow-lg">
-          {/* Image Div */}
+      <div className="max-w-6xl mx-auto bg-white/5 backdrop-blur-lg rounded-2xl shadow-xl p-6 md:p-12">
+        <div className="flex flex-col md:flex-row items-center gap-10">
+          {/* Image */}
           <div className="relative w-full md:w-1/3">
             <img
               src={about_pic}
-              className="w-full rounded-l-lg"
-              alt="Muhammad Sufyan - a passionate developer"
+              alt="Muhammad Sufyan"
+              className="rounded-xl w-full h-auto object-cover shadow-lg"
             />
-            {/* <p className="absolute bottom-0 left-0 text-white bg-slate-900 bg-opacity-70 p-2 md:rounded-md rounded-none text-lg">
-              <span className="font-bold md:text-2xl">1.5</span>
+            <div className="absolute bottom-4 left-4 bg-slate-900 bg-opacity-90 text-white px-3 py-2 rounded-lg text-sm md:text-base shadow-md">
+              <span className="text-xl font-bold">1.5</span> Years of
               <br />
-              <span className="md:text-xl text-sm">Years of</span>
-              <br />
-              <span className="md:text-xl text-sm">Experience</span>
-            </p> */}
+              Technical Experience
+            </div>
           </div>
 
-          {/* About Content */}
-          <div className="w-full md:w-2/3 md:p-0 p-6 mx-10 space-y-12">
-            <h1
-              className={`md:text-4xl text-xl text-white text-center p-2 border-2 w-1/2 mx-auto transition-transform duration-1000 ease-out ${
-                isTextVisible
-                  ? "translate-y-0 opacity-100"
-                  : "translate-y-10 opacity-0"
+          {/* Text */}
+          <div className="w-full md:w-2/3 text-white space-y-6">
+            <h2
+              className={`text-3xl md:text-4xl font-semibold text-center md:text-left transition-all duration-700 ease-in-out ${
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-6"
               }`}
             >
               About Me
-            </h1>
-            <div
-              className={`transition-transform duration-1000 ease-out ${
-                isTextVisible
-                  ? "translate-y-0 opacity-100"
-                  : "translate-y-10 opacity-0"
+            </h2>
+            <p
+              className={`md:text-lg text-sm leading-7 text-justify text-gray-300 transition-all duration-700 ease-in-out ${
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-6"
               }`}
             >
-              <p className="text-white md:text-md text-sm md:text-left text-center leading-8">
-                I’m <span className="font-bold">Muhammad Sufyan,</span> a tech
-                enthusiast transitioning into the field of Data Analytics. With
-                a background in UI/UX and Front-End development, I bring a
-                strong foundation in problem-solving, attention to detail, and
-                analytical thinking. 
-                I'm currently focused on building my skills
-                in data analysis. <br/>My goal is to combine my technical background
-                with data-driven insights to deliver solutions that are both
-                impactful and user-friendly.
-              </p>
-            </div>
+              I’m <strong className="text-white">Muhammad Sufyan,</strong> a
+              passionate Data Analyst focused on transforming data into
+              actionable insights. I specialize in tools like Python, SQL, and
+              Power BI to uncover trends, identify opportunities, and support
+              strategic decision-making. With a strong foundation in data
+              handling, visualization, and storytelling,
+              <br />I aim to drive value by turning raw data into meaningful
+              business outcomes.
+            </p>
           </div>
         </div>
       </div>

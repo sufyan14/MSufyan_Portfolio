@@ -3,11 +3,7 @@ import "../App.css";
 import pfp from "../assets/coding.png";
 
 const ProfileSection = () => {
-  const words = [
-    "Junior Data Analyst.",
-    "Developer.",
-    "Software Engineer.",
-  ];
+  const words = ["Junior Data Analyst.", "Developer.", "Software Engineer."];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [currentText, setCurrentText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -37,34 +33,33 @@ const ProfileSection = () => {
   }, [currentText, isDeleting, currentWordIndex, words, speed]);
 
   return (
-    <section className="flex flex-col md:flex-row justify-center items-center p-10 space-y-10 md:space-x-40 md:space-y-0 text-white w-full">
+    <section
+      id="profile"
+      className="flex flex-col md:flex-row font-poppins justify-center items-center pt-32 md:pt-24 md:pb-96 pb-20 bg-[#0a0a23] text-white px-6 space-y-10 md:space-x-20 md:space-y-0"
+    >
       <div className="section__profile-container flex justify-center items-center">
         <div className="floating-glow relative">
           <img
             src={pfp}
-            alt="Muhammad Sufyan pfp"
-            className="lg:h-80 lg:w-80 object-cover rounded-full"
+            alt="Muhammad Sufyan"
+            className="h-40 w-40 sm:h-52 sm:w-52 lg:h-72 lg:w-72 object-cover rounded-full shadow-lg shadow-cyan-500/30 transition-all"
           />
         </div>
       </div>
 
-      <div className="section__text text-center md:text-center space-y-4">
-        <p className="section__text__p1 text-cyan-200 md:text-2xl">
+      <div className="text-center space-y-4">
+        <p className="text-cyan-400 text-lg md:text-xl tracking-wide">
           Hey there, I'm
         </p>
-        <h1 className="title md:text-4xl text-xl font-semibold">Muhammad Sufyan</h1>
-        <p className="section__text__p2 flex justify-center">
-          <span
-            className="multi-text md:text-2xl text-cyan-200"
-            style={{ display: "inline-block", minWidth: "200px" }}
-          >
-            {currentText}
-          </span>
-          <span className="blinking-cursor">|</span>
+        <h1 className="text-3xl md:text-4xl font-extrabold">Muhammad Sufyan</h1>
+        <p className="text-cyan-300 text-lg md:text-2xl font-mono">
+          <span style={{ minWidth: "180px" }}>{currentText}</span>
+          <span className="blinking-cursor ml-1">|</span>
         </p>
-        <div className="btn-container space-x-4 flex justify-center md:justify-center">
+
+        <div className="btn-container space-x-4 flex justify-center pt-2">
           <button
-            className="btn btn-color-2 border-2 p-4 px-8 rounded-full bg-white text-black font-semibold border-black transition duration-300 ease-in-out hover:bg-transparent hover:text-white hover:border-white"
+            className="bg-cyan-400 text-black font-semibold px-6 py-2 rounded-full border-2 border-cyan-400 hover:bg-transparent hover:text-cyan-400 transition"
             onClick={() => {
               const link = document.createElement("a");
               link.href = "/assets/Muhammad_Sufyan_Data_Analyst_Resume.pdf";
@@ -75,8 +70,8 @@ const ProfileSection = () => {
             Resume
           </button>
           <button
-            className="btn btn-color-1 border-2 rounded-full p-4 px-5 border-white font-semibold transition duration-300 ease-in-out hover:bg-white hover:text-black"
-            onClick={() => (window.location.href = "./#contact")}
+            className="bg-transparent border-2 border-cyan-400 text-cyan-400 font-semibold px-6 py-2 rounded-full hover:bg-cyan-400 hover:text-black transition"
+            onClick={() => (window.location.href = "#contact")}
           >
             Contact Me
           </button>
