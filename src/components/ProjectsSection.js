@@ -5,7 +5,9 @@ import { FaChartBar } from "react-icons/fa";
 import p1 from "../assets/project1.jpg";
 import p2 from "../assets/project2.jpg";
 import p3 from "../assets/project3.jpg";
-import dashboardpdf from "../assets/Video Game Sales Dashboard.pdf";
+import p4 from "../assets/project4.jpg";
+import dashboard1 from "../assets/Video Game Sales Dashboard.pdf";
+import dashboard2 from "../assets/Global Unemployment Rate.pdf";
 
 const projects = [
   {
@@ -33,9 +35,20 @@ const projects = [
     image: p3,
     github: "https://github.com/sufyan14/Video-Game-Sales-Dashboard",
     linkText: "View PDF",
-    link: dashboardpdf,
+    link: dashboard1,
     description:
       "This Power BI report analyzes video game sales by platform, genre, publisher, and region. It highlights trends, top-selling titles, and market performance to provide valuable insights for business and research",
+  },
+  {
+    title: "Global Unemployment Rate Dashboard (Power BI)",
+    icon: <FaChartBar className="text-yellow-400 text-3xl" />,
+    tools: ["Power BI", "Excel"],
+    image: p4,
+    github: "https://github.com/sufyan14/Global-Unemployment-Rate-Dashboard",
+    linkText: "View PDF",
+    link: dashboard2,
+    description:
+      "Developed an interactive Power BI dashboard to analyze global unemployment trends (2013–2024) by country, gender, and age, providing actionable insights through dynamic visualizations",
   },
 ];
 
