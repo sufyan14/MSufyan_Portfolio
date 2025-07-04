@@ -7,6 +7,7 @@ import p2 from "../assets/project2.jpg";
 import p3 from "../assets/project3.jpg";
 import p4 from "../assets/project4.jpg";
 import p5 from "../assets/project5.jpg";
+import p6 from "../assets/project6.jpg";
 import dashboard1 from "../assets/Video Game Sales Dashboard.pdf";
 import dashboard2 from "../assets/Global Unemployment Rate.pdf";
 import dashboard3 from "../assets/Netflix Movies and Shows IMDb Score Dashboard.pdf";
@@ -50,7 +51,7 @@ const projects = [
     title: "Weather Forecast Dashboard",
     icon: <FaChartBar className="text-yellow-400 text-3xl" />,
     tools: ["Streamlit", "Excel", "Python"],
-    image: p4,
+    image: p6,
     github: "https://github.com/sufyan14/Weather-Data-Analysis",
     linkText: "View Site",
     link: "https://sufyan-weather-forecast-analysis.streamlit.app/",
