@@ -14,32 +14,33 @@ import {
 } from "react-icons/si";
 import { FaDatabase } from "react-icons/fa";
 import { PiMicrosoftExcelLogoFill } from "react-icons/pi";
-import { SiJupyter } from "react-icons/si";
+import { SiJupyter, SiApachespark } from "react-icons/si";
 
 const skills = {
   programming: [
     { name: "Python", icon: <SiPython className="text-yellow-300" /> },
+    { name: "PySpark", icon: <SiApachespark className="text-red-400" /> },
     { name: "NumPy", icon: <SiNumpy className="text-blue-500" /> },
     { name: "Pandas", icon: <SiPandas className="text-indigo-300" /> },
-    { name: "Jupyter", icon: <SiJupyter className="text-orange-300" /> },
-  ],
-  ml_vis: [
     {
       name: "scikit-learn",
       icon: <SiScikitlearn className="text-yellow-400" />,
     },
+    { name: "Jupyter", icon: <SiJupyter className="text-orange-300" /> },
+  ],
+  ml_analytics: [
     { name: "TensorFlow", icon: <SiTensorflow className="text-orange-500" /> },
     { name: "Keras", icon: <SiKeras className="text-red-400" /> },
+    { name: "Power BI", icon: <SiPowerbi className="text-yellow-300" /> },
     { name: "Tableau", icon: <SiTableau className="text-orange-300" /> },
-    { name: "Power Bi", icon: <SiPowerbi className="text-yellow-300" /> },
-  ],
-  tools: [
-    { name: "SQL", icon: <FaDatabase className="text-blue-200" /> },
-    { name: "MySQL", icon: <SiMysql className="text-blue-400" /> },
     {
       name: "Excel",
       icon: <PiMicrosoftExcelLogoFill className="text-green-400" />,
     },
+  ],
+  tools: [
+    { name: "SQL", icon: <FaDatabase className="text-blue-200" /> },
+    { name: "MySQL", icon: <SiMysql className="text-blue-400" /> },
   ],
 };
 
@@ -68,8 +69,8 @@ const DataSkills = () => {
       {Object.entries(skills).map(([section, skillsList], idx) => {
         const titles = {
           programming: "Programming & Libraries",
-          ml_vis: "Machine Learning & Visualization",
-          tools: "Data Tools & Databases",
+          ml_analytics: "Machine Learning & Analytics",
+          tools: "Databases and Querying",
         };
 
         return (

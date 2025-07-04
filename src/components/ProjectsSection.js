@@ -6,28 +6,12 @@ import p1 from "../assets/project1.jpg";
 import p2 from "../assets/project2.jpg";
 import p3 from "../assets/project3.jpg";
 import p4 from "../assets/project4.jpg";
+import p5 from "../assets/project5.jpg";
 import dashboard1 from "../assets/Video Game Sales Dashboard.pdf";
 import dashboard2 from "../assets/Global Unemployment Rate.pdf";
+import dashboard3 from "../assets/Netflix Movies and Shows IMDb Score Dashboard.pdf";
 
 const projects = [
-  {
-    title: "Mobile Price Classifier (RandomForest)",
-    icon: <MdPhoneAndroid className="text-pink-400 text-3xl" />,
-    tools: ["Python", "NumPy", "scikit-learn", "matplotlib", "Seaborn"],
-    image: p1,
-    github: "https://github.com/sufyan14/ML-Mobile-Price-Classifier",
-    description:
-      "This project uses a Random Forest Classifier to predict mobile phone price range categories based on features, built and evaluated with Python",
-  },
-  {
-    title: "Student GPA Prediction (KNN)",
-    icon: <PiStudentFill className="text-green-400 text-3xl" />,
-    tools: ["Python", "NumPy", "scikit-learn", "matplotlib", "Seaborn"],
-    image: p2,
-    github: "https://github.com/sufyan14/ML-Student-GPA-Prediction",
-    description:
-      "K-Nearest Neighbors (KNN) algorithm to predict student performance from behavioral and demographic data, implemented in Python",
-  },
   {
     title: "Video Game Sales Dashboard (Power BI)",
     icon: <FaChartBar className="text-yellow-400 text-3xl" />,
@@ -49,6 +33,47 @@ const projects = [
     link: dashboard2,
     description:
       "Developed an interactive Power BI dashboard to analyze global unemployment trends (2013–2024) by country, gender, and age, providing actionable insights through dynamic visualizations",
+  },
+  {
+    title: "Netflix Movies/Shows IMDb Score Dashboard (Power BI)",
+    icon: <FaChartBar className="text-yellow-400 text-3xl" />,
+    tools: ["Power BI", "Excel"],
+    image: p5,
+    github:
+      "https://github.com/sufyan14/Netflix-Movies-Shows-IMDb-Score-Dashboard",
+    linkText: "View PDF",
+    link: dashboard3,
+    description:
+      "Created a interactive Power BI dashboard to analyze Netflix Movies/Shows IMDb Scores through genre, year released, most watched through advanced dashboard techniques and visuals",
+  },
+  {
+    title: "Weather Forecast Dashboard",
+    icon: <FaChartBar className="text-yellow-400 text-3xl" />,
+    tools: ["Streamlit", "Excel", "Python"],
+    image: p4,
+    github: "https://github.com/sufyan14/Weather-Data-Analysis",
+    linkText: "View Site",
+    link: "https://sufyan-weather-forecast-analysis.streamlit.app/",
+    description:
+      "Created and deployed a Weather Forecast App using Python and Streamlit which analyzes weather data and displays output in form of a dashboard",
+  },
+  {
+    title: "Mobile Price Classifier (RandomForest)",
+    icon: <MdPhoneAndroid className="text-pink-400 text-3xl" />,
+    tools: ["Python", "NumPy", "scikit-learn", "matplotlib", "Seaborn"],
+    image: p1,
+    github: "https://github.com/sufyan14/ML-Mobile-Price-Classifier",
+    description:
+      "This project uses a Random Forest Classifier to predict mobile phone price range categories based on features, built and evaluated with Python",
+  },
+  {
+    title: "Student GPA Prediction (KNN)",
+    icon: <PiStudentFill className="text-green-400 text-3xl" />,
+    tools: ["Python", "NumPy", "scikit-learn", "matplotlib", "Seaborn"],
+    image: p2,
+    github: "https://github.com/sufyan14/ML-Student-GPA-Prediction",
+    description:
+      "K-Nearest Neighbors (KNN) algorithm to predict student performance from behavioral and demographic data, implemented in Python",
   },
 ];
 
