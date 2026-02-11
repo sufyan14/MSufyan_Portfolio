@@ -3,7 +3,7 @@ import "../App.css";
 import pfp from "../assets/coding.png";
 
 const ProfileSection = () => {
-  const words = ["Junior Data Analyst.", "Developer.", "Software Engineer."];
+  const words = ["Junior Data Analyst."];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [currentText, setCurrentText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);

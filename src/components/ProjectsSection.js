@@ -14,15 +14,20 @@ import dashboard3 from "../assets/Netflix Movies and Shows IMDb Score Dashboard.
 
 const projects = [
   {
-    title: "Video Game Sales Dashboard (Power BI)",
+    title: "Job Market Intelligence System",
     icon: <FaChartBar className="text-yellow-400 text-3xl" />,
-    tools: ["Power BI", "Excel"],
+    tools: [
+      "Python",
+      "NumPy",
+      "scikit-learn",
+      "matplotlib",
+      "Power BI",
+      "Excel",
+    ],
     image: p3,
-    github: "https://github.com/sufyan14/Video-Game-Sales-Dashboard",
-    linkText: "View PDF",
-    link: dashboard1,
+    github: "https://github.com/sufyan14/job-market-intelligence-system",
     description:
-      "This Power BI report analyzes video game sales by platform, genre, publisher, and region. It highlights trends, top-selling titles, and market performance to provide valuable insights for business and research",
+      "Built an end-to-end AI-driven Job Market Intelligence System that analyzes large-scale job postings using NLP and clustering to uncover in-demand skills, salary patterns, role archetypes, and career transition pathways.",
   },
   {
     title: "Global Unemployment Rate Dashboard (Power BI)",
@@ -33,7 +38,7 @@ const projects = [
     linkText: "View PDF",
     link: dashboard2,
     description:
-      "Developed an interactive Power BI dashboard to analyze global unemployment trends (2013–2024) by country, gender, and age, providing actionable insights through dynamic visualizations",
+      "Developed an interactive Power BI dashboard to analyze global unemployment trends (2013–2024) by country, gender, and age, providing actionable insights through dynamic visualizations.",
   },
   {
     title: "Netflix Movies/Shows IMDb Score Dashboard (Power BI)",
@@ -45,7 +50,7 @@ const projects = [
     linkText: "View PDF",
     link: dashboard3,
     description:
-      "Created a interactive Power BI dashboard to analyze Netflix Movies/Shows IMDb Scores through genre, year released, most watched through advanced dashboard techniques and visuals",
+      "Created a interactive Power BI dashboard to analyze Netflix Movies/Shows IMDb Scores through genre, year released, most watched through advanced dashboard techniques and visuals.",
   },
   {
     title: "Weather Forecast Dashboard",
@@ -56,7 +61,7 @@ const projects = [
     linkText: "View Site",
     link: "https://sufyan-weather-forecast-analysis.streamlit.app/",
     description:
-      "Created and deployed a Weather Forecast App using Python and Streamlit which analyzes weather data and displays output in form of a dashboard",
+      "Created and deployed a Weather Forecast App using Python and Streamlit which analyzes weather data and displays output in form of a dashboard.",
   },
   {
     title: "Mobile Price Classifier (RandomForest)",
@@ -65,7 +70,7 @@ const projects = [
     image: p1,
     github: "https://github.com/sufyan14/ML-Mobile-Price-Classifier",
     description:
-      "This project uses a Random Forest Classifier to predict mobile phone price range categories based on features, built and evaluated with Python",
+      "This project uses a Random Forest Classifier to predict mobile phone price range categories based on features, built and evaluated with Python.",
   },
   {
     title: "Student GPA Prediction (KNN)",
@@ -74,7 +79,7 @@ const projects = [
     image: p2,
     github: "https://github.com/sufyan14/ML-Student-GPA-Prediction",
     description:
-      "K-Nearest Neighbors (KNN) algorithm to predict student performance from behavioral and demographic data, implemented in Python",
+      "K-Nearest Neighbors (KNN) algorithm to predict student performance from behavioral and demographic data, implemented in Python.",
   },
 ];
 
